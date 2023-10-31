@@ -1,0 +1,21 @@
+ {
+        "professionalName": "David Adeogun",
+        "base64Image": "your_base64_encoded_image_string",
+        "nameLink": {
+            "firstName": "David",
+            "url": "https://davidadeogun.github.io/portfolio/"
+        },
+        "primaryDescription": "Junior at BYU Idaho",
+        "workDescription1": "Software Developer Major at BYUI",
+        "workDescription2": "AI Data Curator at a startup in Atlanta",
+        "linkTitleText": "I enjoy programming because it makes me think outside of the box.",
+        "linkedInLink": {
+            "text": "Your LinkedIn text",
+            "link": "https://www.linkedin.com/in/adeogundavid/"
+        },
+        "githubLink": {
+            "text": "Your GitHub text",
+            "link": "https://github.com/davidadeogun"
+        }
+    }
+
