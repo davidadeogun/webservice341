@@ -13,6 +13,10 @@ const port = 8080; // default port for local dev
 app.use(cors());
 app.use(express.json());  // For parsing JSON requests
 
+//use this to serve up front end 
+app.use(express.static('frontend'));
+
+
 // Routes
 app.use('/', require('./routes/nameRoute'));
 /*app.use('/', require('./routes/userContacts'));  // You can add this if you've created contactRoutes*/
