@@ -3,6 +3,7 @@
 
 const express = require('express');
 const mongodb = require('./data/database');
+const { professionalData } = require('./controllers/users');
 const app = express();
 
 
@@ -13,6 +14,8 @@ app.use('/', require('./routes'));
 
 app.use(express.static('frontend'));
 app.use(express.json());
+// NEW UPDATE
+app.use(professionalData);
 
 
 mongodb.initDb((err) => {
