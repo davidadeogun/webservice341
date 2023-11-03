@@ -1,9 +1,6 @@
-
-
-
 const express = require('express');
 const mongodb = require('./data/database');
-const { professionalData } = require('./controllers/users');
+const {professionalData} = require('./controllers/users');
 const app = express();
 
 

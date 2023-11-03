@@ -22,7 +22,14 @@ const getSingle = async (req, res) => {
         res.status(200).json(users[0]);
     });
 };
-
+//chANGE HERE WHEN NEEDED
+/*const professionalData = async (req, res) => {
+    const result = await mongodb.getDb().collection('profile').find();
+    result.toArray().then((users) => {
+        res.setHeader('Content-Type', 'application/json');
+        res.status(200).json(users);
+    });
+};   */
 
 const professionalData = (req, res) => {
     const dataPath = path.join(__dirname, '..', 'json', 'professional.json');
