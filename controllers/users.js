@@ -29,7 +29,7 @@ const getSingle = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users);
     });
-};   */
+}; */
 
 const professionalData = (req, res) => {
     const dataPath = path.join(__dirname, '..', 'json', 'professional.json');
