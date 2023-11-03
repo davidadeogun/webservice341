@@ -1,0 +1,15 @@
+# Get all users
+GET http://localhost:8080/users
+
+
+# Get a single user by ID (replace ':id' with an actual user ID)
+
+GET http://localhost:8080/users/:id
+
+//First user : "_id": "6542812fce74cd8caad66405"
+//Second user: " _id": "654281c8ce74cd8caad66406"
+//Third user: " _id": "654281e8ce74cd8caad66407"
+
+# Get professional data
+
+GET http://localhost:8080/professional

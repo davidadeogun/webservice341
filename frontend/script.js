@@ -11,16 +11,6 @@ const getData = async () => {
   displayAllData(data);
 };
 
-/*const getData = async () => {
-  try {
-    const data = await apiFetch('http://localhost:8080/professional');
-    displayAllData(data);
-  } catch (error) {
-    console.error('An error occurred while fetching data:', error);
-    // Handle the error appropriately
-  }
-}; */
-
 
 function displayAllData(data) {
   displayProfessionalName(data.professionalName);
