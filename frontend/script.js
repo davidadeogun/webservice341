@@ -5,12 +5,12 @@ async function apiFetch(url) {
   return data;
 }
 
-/*const getData = async () => {
+const getData = async () => {
   const data = await apiFetch('http://localhost:8080/professional');
   displayAllData(data);
-};*/
+};
 
-const getData = async () => {
+/*const getData = async () => {
   try {
     const data = await apiFetch('http://localhost:8080/professional');
     displayAllData(data);
@@ -18,7 +18,7 @@ const getData = async () => {
     console.error('An error occurred while fetching data:', error);
     // Handle the error appropriately
   }
-};
+}; */
 
 
 function displayAllData(data) {
