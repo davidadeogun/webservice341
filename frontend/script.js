@@ -7,6 +7,7 @@ async function apiFetch(url) {
 
 const getData = async () => {
   const data = await apiFetch('http://localhost:8080/professional');
+  //console.log(data);
   displayAllData(data);
 };
 
