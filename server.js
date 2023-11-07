@@ -18,7 +18,7 @@ mongodb.initDb((err) => {
         console.log('Error connecting to database', err);
     } else {
         app.listen(process.env.PORT || port, () => {
-            console.log('Database is listening and Node running on port ' + (process.env.PORT || port));
+            console.log('Database is connected and Server running on port ' + (process.env.PORT || port));
         });
     }
 }); 
