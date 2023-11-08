@@ -5,7 +5,7 @@
     "description": "API for NodeJS",
     "version": "1.0.0"
   },
-  "host": "https://webservice2023.onrender.com",
+  "host": "webservice2023.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
