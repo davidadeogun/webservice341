@@ -6,10 +6,51 @@ GET http://localhost:8080/users
 
 GET http://localhost:8080/users/:id
 
-//First user : "_id": "6542812fce74cd8caad66405"
-//Second user: " _id": "654281c8ce74cd8caad66406"
-//Third user: " _id": "654281e8ce74cd8caad66407"
 
 # Get professional data
 
 GET http://localhost:8080/professional
+
+//Create User
+
+POST http://localhost:8080/users HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "David",
+    "lastName": "Doe",
+    "email": "doejohn@yahoo.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+
+
+//Update User
+
+
+PUT http://localhost:8080/users/:id  HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "doejohn@yahoo.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+
+//Delete user
+
+DELETE http://localhost:8080/users/:id  HTTP/1.1
+Content-Type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "doejohn@yahoo.com",
+    "favoriteColor": "blue",
+    "birthday": "1990-01-01"
+}
+
+
+

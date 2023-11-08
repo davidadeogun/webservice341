@@ -32,12 +32,68 @@ const professionalData = async (req, res) => {
     });
 }; 
 
-/*const professionalData = (req, res) => {
-    const dataPath = path.join(__dirname, '..', 'json', 'professional.json');
-    const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
-    res.json(data);
-}; */
+// Week 2 Newly added. Add other endpoints
+//Create User
+const createUser = async (req, res) => {
+    //#swagger.tags= [' Hello Users']
+    const userId = new ObjectId(req.params.id);
+    const newUser = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        favoriteColor: req.body.favoriteColor,
+        birthday: req.body.birthday
+    };
+    const response = await mongodb.getDb().collection('users').insertOne({_id: userId}, newUser);
+    if (response.acknowledged > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Error creating user');
+    }
+    
+}; 
 
 
-module.exports = {getAll, getSingle, professionalData};
+//update user
+const updateUser = async (req, res) => {
+    //#swagger.tags= [' Hello Users']
+    const userId = new ObjectId(req.params.id);
+    const newUser = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        favoriteColor: req.body.favoriteColor,
+        birthday: req.body.birthday
+    };
+    const response = await mongodb.getDb().collection('users').replaceOne({_id: userId}, newUser);
+    if (response.modifiedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).json(response.error || 'Error updating user');
+    }
+
+};
+
+//delete user
+
+const deleteUser = async (req, res) => {
+    //#swagger.tags= [' Hello Users']
+    const userId = new ObjectId(req.params.id);
+    try {
+        const response = await mongodb.getDb().collection('users').deleteOne({_id: userId});
+        if (response.deletedCount > 0) {
+            res.status(204).send();
+        } else {
+            res.status(404).json('User not found');
+        }
+    } catch (error) {
+        res.status(500).json('Error deleting user: ' + error.message);
+    }
+};
+
+
+
+
+
+module.exports = {getAll, getSingle, professionalData, createUser, updateUser, deleteUser};
 
