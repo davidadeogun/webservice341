@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser'); //Week 2
 const mongodb = require('./data/database');
-const {professionalData} = require('./controllers/contacts');
+//const {professionalData} = require('./controllers/contacts');
 const app = express();
 const cors = require('cors')
 
@@ -26,7 +26,7 @@ app.use(cors());
 app.use('/', require('./routes'));
 app.use(express.static('frontend'));
 app.use(express.json());
-app.use(professionalData);
+//app.use(professionalData);
 
 
 mongodb.initDb((err) => {

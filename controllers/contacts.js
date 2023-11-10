@@ -21,14 +21,14 @@ const getSingle = async (req, res) => {
     });
 };
 //chANGE HERE WHEN NEEDED
-const professionalData = async (req, res) => {
+/*const professionalData = async (req, res) => {
     const result = await mongodb.getDb().collection('profile').find();
     //console.log(result);
     result.toArray().then((profile) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(profile[0]);
     });
-}; 
+}; */
 
 // Week 2 Newly added. Add other endpoints
 //Create User
@@ -93,5 +93,5 @@ const deleteUser = async (req, res) => {
 
 
 
-module.exports = {getAll, getSingle, professionalData, createUser, updateUser, deleteUser};
+module.exports = {getAll, getSingle, createUser, updateUser, deleteUser};
 
