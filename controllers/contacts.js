@@ -7,7 +7,7 @@ const getAll = async (req, res) => {
     const result = await mongodb.getDb().collection('contacts').find();
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
+        res.status(200).json(contacts);
     });
 };
 
@@ -17,7 +17,7 @@ const getSingle = async (req, res) => {
     const result = await mongodb.getDb().collection('contacts').find({ _id: userId });
     result.toArray().then((users) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users[0]);
+        res.status(200).json(contacts[0]);
     });
 };
 //chANGE HERE WHEN NEEDED
