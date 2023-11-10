@@ -24,7 +24,7 @@
         }
       }
     },
-    "/users/": {
+    "/contacts/": {
       "get": {
         "description": "",
         "produces": [
@@ -77,7 +77,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/contacts/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -169,7 +169,7 @@
         }
       }
     },
-    "/users/professional": {
+    "/contacts/professional": {
       "get": {
         "description": "",
         "produces": [
