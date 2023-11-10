@@ -3,7 +3,7 @@ const router = express.Router();
 
 const usersController = require('../controllers/contacts');
 
-router.get('/', usersController.getAll);
+router.get('/contacts', usersController.getAll);
 
 router.get('/:id', usersController.getSingle);
 
