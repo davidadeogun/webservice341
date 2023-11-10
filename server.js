@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser'); //Week 2
 const mongodb = require('./data/database');
-const {professionalData} = require('./controllers/users');
+const {professionalData} = require('./controllers/contacts');
 const app = express();
 const cors = require('cors')
 
