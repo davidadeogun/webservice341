@@ -7,6 +7,6 @@ router.get('/', (req, res) => {
     res.send('Welcome to the Users API!');
 });
 
-router.use('/tests', require('./tests'));
+router.use('/contacts', require('./contacts'));
 
 module.exports = router;
