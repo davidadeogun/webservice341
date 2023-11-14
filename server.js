@@ -5,7 +5,7 @@ const mongodb = require('./data/database');
 const app = express();
 const cors = require('cors')
 
-const port = process.env.PORT || 8080; // default port for local dev
+const port = process.env.PORT || 3000; // default port for local dev
 
 
 app.use(bodyParser.json()); //Week 2 
@@ -27,6 +27,14 @@ app.use('/', require('./routes'));
 app.use(express.static('frontend'));
 app.use(express.json());
 //app.use(professionalData);
+
+
+//Newly added  Week 3 Team Activity  
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exception: ${err}\nException origin: ${origin}`);
+});
+
+
 
 
 mongodb.initDb((err) => {
