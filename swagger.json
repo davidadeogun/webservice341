@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Users API",
+    "title": "API Tests",
     "description": "API for NodeJS",
     "version": "1.0.0"
   },
@@ -20,6 +20,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -98,9 +108,6 @@
         }
       },
       "put": {
-        "tags": [
-          " Hello Users"
-        ],
         "description": "",
         "parameters": [
           {
@@ -144,9 +151,6 @@
         }
       },
       "delete": {
-        "tags": [
-          " Hello Users"
-        ],
         "description": "",
         "parameters": [
           {
@@ -165,19 +169,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/users/professional": {
-      "get": {
-        "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
           }
         }
       }
