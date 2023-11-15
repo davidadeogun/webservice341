@@ -7,7 +7,7 @@ const cors = require('cors')
 
 const port = process.env.PORT || 8080; // default port for local dev
 
-
+app.use(cors());  //cors should be declared immediately after the port declaration
 app.use(bodyParser.json()); //Week 2 
 app.use((req, res, next) => {       //week2 newly added
    res.setHeader('Access-Control-Allow-Origin', '*');
@@ -22,7 +22,7 @@ app.use((req, res, next) => {       //week2 newly added
     next();
 });
 
-app.use(cors());
+
 app.use('/', require('./routes'));
 app.use(express.static('frontend'));
 app.use(express.json());
