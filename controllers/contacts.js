@@ -20,6 +20,7 @@ const getSingle = async (req, res) => {
         res.status(200).json(contacts[0]);
     });
 };
+
 //chANGE HERE WHEN NEEDED
 /*const professionalData = async (req, res) => {
     const result = await mongodb.getDb().collection('profile').find();

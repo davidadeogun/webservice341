@@ -12,6 +12,7 @@ router.get('/:id', usersController.getSingle);
 //Week2 Newly added. Add other endpoints
 router.post('/', usersController.createUser);
 
+
 router.put('/:id', usersController.updateUser);
 
 router.delete('/:id', usersController.deleteUser);
